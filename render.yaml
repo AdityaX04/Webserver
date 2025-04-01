@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: flask-file-server
+    name: multiuser-file-server
     env: python
-    buildCommand: ""
-    startCommand: "python app.py"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 app.py"
