@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Hello {{ session['username'] }}</h1>
+    <p>Storage Used: {{ storage_used }}</p>
+    <ul>
+        {% for file in files %}
+            <li><a href="/files/{{ file.name }}">{{ file.name }}</a> - {{ file.size }} - {{ file.time }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
